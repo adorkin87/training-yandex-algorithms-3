@@ -17,7 +17,7 @@ class Stack:
         return len(self.stack)
 
 
-with open('input.txt', 'r') as f:
+with open('./input.txt', 'r') as f:
     source_array = f.readlines()
 n = int(source_array.pop(0))
 cities = list(map(int, source_array[0].split()))

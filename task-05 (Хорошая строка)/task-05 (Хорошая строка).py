@@ -15,7 +15,7 @@ def good_str(str: list, row: int) -> int:
     return result
 
 
-with open('input.txt', 'r') as f:
+with open('./input.txt', 'r') as f:
     array_source = [int(_) for _ in f.readlines()]
 n = array_source.pop(0)
 sort_index_array = sorted(array_source)

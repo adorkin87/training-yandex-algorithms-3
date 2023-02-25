@@ -1,4 +1,4 @@
-with open('input.txt', 'r') as f:
+with open('./input.txt', 'r') as f:
     source_array = f.readlines()
 n = int(source_array.pop(0))
 array = list(map(int, source_array[0].split()))

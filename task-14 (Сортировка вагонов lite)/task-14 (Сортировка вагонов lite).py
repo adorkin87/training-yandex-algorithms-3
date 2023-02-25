@@ -17,7 +17,7 @@ class Stack:
         return len(self.stack)
 
 
-with open('input.txt', 'r') as f:
+with open('./input.txt', 'r') as f:
     source_array = f.readlines()
 n = int(source_array.pop(0))
 wagons = (source_array[0]).split()

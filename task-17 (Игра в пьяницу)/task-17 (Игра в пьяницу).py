@@ -1,4 +1,4 @@
-with open('input.txt', 'r') as f:
+with open('./input.txt', 'r') as f:
     source_array = f.readlines()
 first_gamer = list(map(int, source_array[0].split()))
 second_gamer = list(map(int, source_array[1].split()))

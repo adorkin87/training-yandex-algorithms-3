@@ -1,4 +1,4 @@
-with open('input.txt', 'r') as txt:
+with open('./input.txt', 'r') as txt:
     source_str = txt.readlines()
 str = ''.join(source_str)
 clear_str = str.replace(' ', '')

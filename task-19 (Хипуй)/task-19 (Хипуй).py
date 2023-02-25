@@ -27,7 +27,7 @@ class Heap:
         print(result)
 
 
-with open('input.txt', 'r') as f:
+with open('./input.txt', 'r') as f:
     list_command = f.readlines()
 n = int(list_command.pop(0))
 

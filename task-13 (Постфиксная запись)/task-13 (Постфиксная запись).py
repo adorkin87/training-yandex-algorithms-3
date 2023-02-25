@@ -16,8 +16,10 @@ class Stack:
     def size(self):
         return len(self.stack)
 
-source_str = input()
-array_data = source_str.split()
+# source_str = input()
+with open('input.txt', 'r') as f:
+    stroka = f.readline()
+array_data = stroka.split()
 stack = Stack()
 operators = {'+', '-', '*', '/'}
 for symbol in array_data:
