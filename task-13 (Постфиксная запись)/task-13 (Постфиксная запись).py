@@ -2,8 +2,8 @@ class Stack:
     def __init__(self):
         self.stack = []
 
-    def push(self, bracket):
-        self.stack.append(bracket)
+    def push(self, value):
+        self.stack.append(value)
 
     def pop(self):
         if len(self.stack) > 0:
@@ -11,15 +11,15 @@ class Stack:
 
     def back(self):
         if len(self.stack) > 0:
-            return (self.stack[-1])
+            return self.stack[-1]
 
     def size(self):
         return len(self.stack)
 
-# source_str = input()
+
 with open('input.txt', 'r') as f:
-    stroka = f.readline()
-array_data = stroka.split()
+    line = f.readline()
+array_data = line.split()
 stack = Stack()
 operators = {'+', '-', '*', '/'}
 for symbol in array_data:

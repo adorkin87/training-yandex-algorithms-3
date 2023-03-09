@@ -2,8 +2,8 @@ class Stack:
     def __init__(self):
         self.stack = []
 
-    def push(self, bracket):
-        self.stack.append(bracket)
+    def push(self, value):
+        self.stack.append(value)
 
     def pop(self):
         if len(self.stack) > 0:
@@ -13,7 +13,7 @@ class Stack:
 
     def back(self):
         if len(self.stack) > 0:
-            return (self.stack[-1])
+            return self.stack[-1]
         else:
             print('error')
 
@@ -21,27 +21,26 @@ class Stack:
         return len(self.stack)
 
 
-str = input()
+line = input()
 stack = Stack()
 close_brackets = {')', ']', '}'}
 open_brackets = {'(', '[', '{'}
-if str == '':
+if line == '':
     print('yes')
 else:
-    for bracket in str:
+    for bracket in line:
         if stack.size() == 0 and bracket in close_brackets:
             print('no')
             break
         elif bracket in open_brackets:
             stack.push(bracket)
         else:
-            if (bracket == ')' and stack.back() == '(') or (bracket == ']' and stack.back() == '[') or (bracket == '}' and stack.back() == '{'):
+            if (bracket == ')' and stack.back() == '(')\
+                    or (bracket == ']' and stack.back() == '[')\
+                    or (bracket == '}' and stack.back() == '{'):
                 stack.pop()
             else:
                 print('no')
                 break
     else:
-        if stack.size() == 0:
-            print('yes')
-        else:
-            print('no')
+        print('yes') if stack.size() == 0 else print('no')

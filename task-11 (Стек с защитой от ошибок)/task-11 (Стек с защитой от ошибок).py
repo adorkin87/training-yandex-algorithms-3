@@ -2,8 +2,8 @@ class Stack:
     def __init__(self):
         self.stack = []
 
-    def push(self, n):
-        self.stack.append(int(n))
+    def push(self, value):
+        self.stack.append(int(value))
         print('ok')
 
     def pop(self):
